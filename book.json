@@ -16,18 +16,17 @@
         }
     },
     "plugins": [
-        "-sharing",
         "splitter",
-        "expandable-chapters-small",
         "anchors",
-        "github",
-        "donate",
-        "sharing-plus",
-        "anchor-navigation-ex",
         "favicon",
-	"summary",
-	"toggle-chapters",
-	"theme-comscore"
+        "chapter-fold",
+        "code",
+        "expandable-chapters",
+        "todo",
+        "-lunr", 
+        "-search", 
+        "search-pro",
+        "page-treeview"
     ],
     "pluginsConfig": {
         "github": {
