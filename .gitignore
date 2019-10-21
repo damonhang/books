@@ -1,2 +1,7 @@
 /node_modules/
 /_book/
+/.idea/
+gitbooks.xml
+misc.xml
+vcs.xml
+compiler.xml
