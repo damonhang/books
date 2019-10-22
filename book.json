@@ -26,7 +26,8 @@
         "-lunr", 
         "-search", 
         "search-pro",
-        "page-treeview"
+        "page-treeview",
+		"summary"
     ],
     "pluginsConfig": {
         "github": {
