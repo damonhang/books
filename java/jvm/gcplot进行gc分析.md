@@ -1,6 +1,22 @@
 ## 基于gcplot进行gc日志分析
 
-### gcplot的安装
+### gc日志的收集
+
+[jvm参数配置参考地址](https://www.oracle.com/technetwork/java/javase/tech/vmoptions-jsp-140102.html)
+
+gcplot推荐的gc日志收集jvm参数:
+
+```java
+-XX:+PrintGCDetails -XX:+PrintTenuringDistribution -XX:+PrintGCTimeStamps -XX:+PrintGCDateStamps -Xloggc:/path/to/file 
+```
+
+主要的参数项意义  Xloggc :指定gc日志的文件(1.8以后 推荐使用  -verbose )PrintGCDetails :打印回收详情, PrintGCTimeStamps :打印gc的时间戳， PrintHeapAtGC：打印gc的次数和gc前后的heap内存使用情况
+
+> 有一点需要注意的是，如果直接指定gc日式文件，在程序重启后，之前记录的文件会被覆盖，导致内容丢失，在某些版本的Java中，可以在文件名中加上**％t**，这样文件名会带上当前时间格式字符串，或者**％p**带上进程ID，另外一种解决方案是基于内置**GC日志文件轮换** . `-XX：+ UseGCLogFileRotation -XX：NumberOfGCLogFiles = 10 -XX：GCLogFileSize = 10M` ， 通过最多10个文件，'.0'，'.1'... '.9'将被添加到您在Xloggc中给出的文件名中。 .0将是第一个，在达到.9之后，它将取代.0并以循环方式继续 
+
+### 日志分析
+
+#### gcplot的安装
 
 [GCPLOT官网](https://gcplot.com/)
 
@@ -10,7 +26,7 @@
 2. 终端运行命令 docker run -d -p 80:80 gcplot/gcplot
 3. 在浏览器访问地址 http://127.0.0.1 用户名和密码均为admin
 
-### 使用
+#### 使用
 
 登陆后访问: General ->Upload gc log->选择文件->点击uplioad上传按钮。待上传成功后访问:Analysis Groups->Files-><你上传的日志文件> 就可以看到具体的分析信息
 
