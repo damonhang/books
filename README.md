@@ -1,6 +1,6 @@
 # Introduction
 
-基于gitbook+Typora+github+sourcetree搭建多端同步笔记系统
+基于gitbook+Typora+github+sourcetree搭建自己的笔记系统
 
 在本地通过Typora进行markdown文档的编辑，通过git进行管理，并将对应文档推送至github，github仓库可以随自己设置，私有或者公有都可以，如果没有其他的git客户端(git command除外)，例如基于IDEA vcs的git管理工具，那么可以使用sourcetree进行本地git管理。对应的文档可以通过gitbook进行发布，在网页端进行浏览，发布的时候还可以生成文档内目录等。
 
