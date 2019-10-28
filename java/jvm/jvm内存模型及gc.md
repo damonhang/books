@@ -2,20 +2,106 @@
 
 ### 运行时内存划分
 
- ![640?wx_fmt=png](https://ss.csdn.net/p?https://mmbiz.qpic.cn/mmbiz_png/nXyTmFfqCEMWCWQBibopnva05EERcRfiacZxWibdFcFBqWmeQPYS0y05ibPge8EhzCcISw0p8vglwgKd0ib227BZvaw/640?wx_fmt=png) 
+ <img src="https://ss.csdn.net/p?https://mmbiz.qpic.cn/mmbiz_png/nXyTmFfqCEMWCWQBibopnva05EERcRfiacZxWibdFcFBqWmeQPYS0y05ibPge8EhzCcISw0p8vglwgKd0ib227BZvaw/640?wx_fmt=png" alt="640?wx_fmt=png" style="zoom:50%;" /> 
 
-#### heapdump
+- **程序计数器**:当前线程执行的字节码的行号指示器，线程私有
+- **java虚拟机栈**：存储局部变量表、操作数栈、动态链接、方法出口等信息 <!--具体信息可以查看《深入理解java虚拟机》第8章，或者可以看《深入理解计算机操作系统原理》3.7章节-->
+- **本地方法栈**:与虚拟机栈相似，为native方法服务
+- **java堆**:线程共享，几乎所有的对象实例都在这里分配内存，在现在的虚拟机实现中，又可以细分为 新生代和老年代.
+- **方法区**，在部分虚拟机实现中，又被称为永久代。主要存放加载的类信息、常量、静态变量等
+- *运行时常量池* 方法区的一部分，存放编译器生成的各种字面量和符号引用
 
 ### GC
 
-#### full gc
+#### 需要收集的对象
+
+引用计数
+
+可达性分析
+
+##### **gc root** 
+
+1. 虚拟机栈中引用的变量
+2. 方法区中静态属性引用的变量
+3. 方法区中常量引用的变量
+4. 本地方法栈中JNI引用的对象
+
+##### 可以被收集的类需要同时满足条件
+
+1.类的实例都已经被回收
+
+2.加载该类的classloader已经被回收
+
+3.该类对应的class对象没在任何地方被引用
+
+#### 收集的算法
+
+##### 标记清除
+
+##### 复制算法(新生代)
+
+将内存分了两个survivor和一个eden区，比例是1:1:8 可以通过参数调整 回收时 将eden和一块survivor还存活的对象复制到另外一块survivor上，如果内存不够需要依赖老年代进行**分配担保**
+
+##### 标记整理(老年代)
+
+#### full gc && Minor GC
+
+Minor GC:发生在新生代的gc
+
+Major GC:发生在老年代
+
+> 发生Major GC时并不是一定就会发生Minor GC
+
+full gc 发生在整个可以GC的区域
 
 Full GC触发条件：
 （1）调用System.gc时，系统建议执行Full GC，但是不必然执行
+
 （2）老年代空间不足
+
 （3）方法区空间不足
+
 （4）通过Minor GC后进入老年代的平均大小大于老年代的可用内存
+
 （5）由Eden区、From Space区向To Space区复制时，对象大小大于To Space可用内存，则把该对象转存到老年代，且老年代的可用内存小于该对象大小
 
+  (6) 执行 jmap -histo:live 或者 jmap -dump:live；
+
+#### STW
+
+为了保证在可达性分析时在一致的快照中进行，GC进行时，必须停顿所有的java进程(STW,stop the world)即使在CMS收集器中，枚举根节点时也是必须要停顿的(安全点、安全区域)，在进行gc分析时，STW的时长作为一个重要的参考信息
+
+#### 垃圾收集器
+
+<img src="/Users/xieyuanhang/Documents/md/image/image-20191026224451243.png" alt="image-20191026224451243" style="zoom:50%;" />
+
+1. serial收集器:单线程收集器，gc时必须暂停其他所有的线程
+
+2. parnew收集器:serial的多线程版
+
+3. parallel seavenge收集器:新生代收集器，使用停止-复制算法，目标是达到一个可控的吞吐量
+
+4. serial old:serial的老年代版本
+
+5. parallel old:parallel seavenge的老年代版本，使用标记整理算法
+
+6. cms收集器:获取最短回收停顿时间为目标的收集器，基于标记清除算法实现
+
+   基于4个步骤:初始标记、并发标记、重新标记、并发清除 ，初始标记和重新标记时，任然需要STW
+
+   缺点:对CPU资源敏感、无法处理浮动垃圾、会产生大量空间碎片
+
+7. g1收集器
+
 #### gc log
+
+#### 内存分配与回收策略
+
+- 对象优先在eden区分配，eden空间不足时，进行Minor GC
+- 大对象直接进入老年代,（写程序时避免短时间使用的大对象），阀值可以通过jvm参数指定，部分收集器默认为3MB
+- 长期存活的对象进入老年代(即gc分析时的对象提升)，长期存活的标准就是经过了多次gc，可以通过jvm参数指定阀值，默认为15次
+- 动态对象年龄判定，如果在survivor中，相同年龄所有对象大小的总和大于survivor空间的一半，，年龄大于等于该年龄的对象直接进入老年代
+- 空间分配担保:发生minor gc时，会查看老年代最大连续可用空间是否大于新生代所有对象总空间，如果成立，则minor gc安全，如果不成立会查看jvm参数是否允许担保失败，如果允许会继续查看老年代连续空间是否大于历次晋升到老年代对象的平均大小，如果大于会尝试一次minor gc
+
+
 

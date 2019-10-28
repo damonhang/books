@@ -1,92 +1,169 @@
-# PKM 知识归纳
+# PKM 知识归纳 
 
-### 技术
+### 技术 
 
-#### 采用
+#### 采用 
 
-#### 试用
+##### git 
 
-#### 评估
-
-#### 暂缓
-
-### 工具
-
-#### 采用
-
-##### githubhunt
-
-chrome插件，更换tab页为github tranding
-
-##### tower
-
-项目协作工具
-
-[tower](https://www.tower.im)
-
-##### sonar
-
-代码质量分析工具
-
-[sonar集成jenkins](https://funnelgarden.com/sonarqube-jenkins-docker/)
-
-##### jenkins
-
-流水线工具
-
-##### Bear
-
-好看的笔记软件
-
-#### 试用
-
-##### vimium
-
-1. chrome插件,开发人员快速处理chrome浏览器的利器
-
-2. 通过增加各种快捷键，提升浏览器使用效率
-
-3. 参考:https://www.jianshu.com/p/849d6b21e02e
-
-##### QSPACE
-
-mac 多视图文件管理器
-
-https://macflow.net/p/1104.html
-
-##### 印象笔记
-
-试用作为纯markdown笔记工具
+强大的vcs 
 
 ##### gitbook
 
-md生成网页book
+基于gitbook-cli+Typora+github实现自己的markdown笔记 并且可以多端同步
+
+##### gcplot
+
+[jvm内存模型及gc笔记](../java/jvm/jvm内存模型及gc.md)
+
+##### Eclipse memory analyzer
+
+分析jvm heapdump的工具
+
+#### 试用 
+
+##### rest assured 
+
+接口测试 
+
+#### 评估 
+
+#### 暂缓 
+
+### 工具 
+
+#### 采用 
+
+##### githubhunt 
+
+chrome插件，更换tab页为github tranding 
+
+##### tower 
+
+项目协作工具 
+
+[tower](https://www.tower.im) 
+
+##### sonar 
+
+代码质量分析工具 
+
+[sonar集成jenkins](https://funnelgarden.com/sonarqube-jenkins-docker/) 
+
+##### jenkins 
+
+流水线工具 
+
+##### Bear 
+
+好看的笔记软件 
+
+##### snap 
+
+mac 多任务切换工具 
+
+##### xmind 
+
+免费的思维导图软件 
+
+##### ohmyzsh 
 
 ##### Typora
 
-本地md编辑工具，支持按目录编辑
+多端markdown编辑器，可以以文件树的形式展示整个目录
 
-#### 评估
+##### utools 
 
-#### 暂缓
+windows强大的Spotlight工具  <!--[windows]-->
 
-### 平台
+##### sublime text2
 
-#### 采用
+多功能编辑器 支持C
 
-#### 试用
+##### postman
 
-#### 评估
+请求模拟工具
 
-#### 暂缓
+##### alfred 
 
-### 语言
+强大的Spotlight工具  <!--[mac]-->
 
-#### 采用
+##### macvim
 
-#### 试用
+mac 可视化vim工具
 
-#### 评估
+##### The Unarchiver
 
-#### 暂缓
+mac 解压缩工具
 
+##### Dash<!--mac-->
+
+##### CHM view <!--mac-->
+
+#### 试用 
+
+##### vimium 
+
+1. chrome插件,开发人员快速处理chrome浏览器的利器 
+
+2. 通过增加各种快捷键，提升浏览器使用效率 
+
+3. 参考:https://www.jianshu.com/p/849d6b21e02e 
+
+##### QSPACE 
+
+mac 多视图文件管理器 
+
+https://macflow.net/p/1104.html 
+
+##### 印象笔记 
+
+试用作为纯markdown笔记工具 
+
+##### sourcetree
+
+简单纯粹的 git工具
+
+#### 评估 
+
+#### 暂缓 
+
+mindmaster 
+
+##### proxefier
+
+网络代理应用，暂时用不到了
+
+### 平台 
+
+#### 采用 
+
+##### OmiGraffle
+
+流程图画图软件 <!--mac-->
+
+##### Charles
+
+各平台抓包软件
+
+[知识收纳](/PKM知识收纳.md)
+
+##### docker
+
+容器化工具
+
+#### 试用 
+
+#### 评估 
+
+#### 暂缓 
+
+### 语言 
+
+#### 采用 
+
+#### 试用 
+
+#### 评估 
+
+#### 暂缓 
