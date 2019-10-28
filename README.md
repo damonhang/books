@@ -1,12 +1,5 @@
 # Introduction
 
-<<<<<<< .merge_file_iKFCxD
-基于gitbook+Typora+markdown+sourcetree搭建多端可同步日志系统
-
-### Typora
-
-https://support.typora.io/
-=======
 基于gitbook+Typora+github+sourcetree搭建自己的笔记系统
 
 在本地通过Typora进行markdown文档的编辑，通过git进行管理，并将对应文档推送至github，github仓库可以随自己设置，私有或者公有都可以，如果没有其他的git客户端(git command除外)，例如基于IDEA vcs的git管理工具，那么可以使用sourcetree进行本地git管理。对应的文档可以通过gitbook进行发布，在网页端进行浏览，发布的时候还可以生成文档内目录等。
@@ -22,7 +15,6 @@ https://support.typora.io/
 ###### 主题设置
 
 可以选择多种样式的主题
->>>>>>> .merge_file_iThe7C
 
 ###### 修改行高
 
@@ -32,22 +24,6 @@ https://support.typora.io/
 
 ###### 启动后打开的目录
 
-<<<<<<< .merge_file_iKFCxD
-**偏好设置**->**通用**->启动选择 选择打开指定的目录
-
-###### 链接到本地目录
-
-笔记之间可以互相链接，通过添加**link**到本地文件的形式
-
-###### 以树形形式展示自己的笔记
-
-切换到文件树视图
-
-### gitbook
-
-### sourcetree
-
-=======
 **偏好设置**->**通用**->启动选择 选择打开指定的目录,可以直接选择作为笔记文件夹的目录
 
 ###### 树形展示笔记
@@ -145,4 +121,3 @@ gitbook启动或者执行install后，会生成很多额外的文件,node_module
 
 
 
->>>>>>> .merge_file_iThe7C
