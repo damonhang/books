@@ -166,7 +166,7 @@ gcplot推荐的gc日志收集jvm参数:
 
 #### 使用
 
-登陆后访问: General ->Upload gc log->选择文件->点击uplioad上传按钮。待上传成功后访问:Analysis Groups->Files-><你上传的日志文件> 就可以看到具体的分析信息
+登陆后访问: General ->Upload gc log->选择文件->点击upload上传按钮。待上传成功后访问:Analysis Groups->Files-><你上传的日志文件> 就可以看到具体的分析信息
 
 
 

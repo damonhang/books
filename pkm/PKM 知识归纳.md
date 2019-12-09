@@ -20,13 +20,39 @@
 
 分析jvm heapdump的工具
 
+##### plantuml
+
+编程化的画图工具
+
+##### reveal-md
+
+markdown转换为pdf的工具
+
 #### 试用 
 
 ##### rest assured 
 
 接口测试 
 
+##### reveal-md
+
+基于css3和markdown的PPT方案
+
+##### arthas
+
+jvm诊断工具
+
+##### restTemplate
+
+spring rest请求工具
+
 #### 评估 
+
+##### fescar
+
+https://github.com/alibaba/fescar
+
+Fescar是一种易于使用，高性能，基于Java的开源分布式事务解决方案，旨在实现简单并快速的事务提交与回滚
 
 #### 暂缓 
 
@@ -100,15 +126,21 @@ mac 解压缩工具
 
 ##### CHM view <!--mac-->
 
-#### 试用 
+##### cmder <!--windows-->
 
-##### vimium 
+windows平台的命令行工具
+
+##### chrome插件
+
+vimium 
 
 1. chrome插件,开发人员快速处理chrome浏览器的利器 
-
 2. 通过增加各种快捷键，提升浏览器使用效率 
-
 3. 参考:https://www.jianshu.com/p/849d6b21e02e 
+
+octotree：github 显示优化
+
+#### 试用 
 
 ##### QSPACE 
 
@@ -125,6 +157,10 @@ https://macflow.net/p/1104.html
 简单纯粹的 git工具
 
 #### 评估 
+
+##### Selenium
+
+浏览器自动化测试工具
 
 #### 暂缓 
 
@@ -158,9 +194,13 @@ mindmaster
 
 #### 暂缓 
 
+
+
 ### 语言 
 
 #### 采用 
+
+##### c语言
 
 #### 试用 
 
