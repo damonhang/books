@@ -16,6 +16,8 @@ Tomcat 就是一个 Servlet 容器, 能接收用户从浏览器发来的请求, 
 
 [tomcat剖析参考文章](https://www.jianshu.com/nb/18936835)
 
+ https://www.jianshu.com/nb/30714822 
+
 #### 目录
 
 - tomcat 组件及架构设计
