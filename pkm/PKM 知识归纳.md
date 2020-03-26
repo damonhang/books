@@ -142,6 +142,10 @@ vimium
 
 octotree：github 显示优化
 
+##### iterm2<!--mac-->
+
+
+
 #### 试用 
 
 ##### QSPACE 
@@ -150,19 +154,19 @@ mac 多视图文件管理器
 
 https://macflow.net/p/1104.html 
 
-##### 印象笔记 
-
-试用作为纯markdown笔记工具 
-
-##### sourcetree
-
-简单纯粹的 git工具
-
 #### 评估 
 
 ##### Selenium
 
 浏览器自动化测试工具
+
+##### wireshark
+
+抓包工具
+
+##### 科莱网络分析系统
+
+抓包工具
 
 #### 暂缓 
 
@@ -171,6 +175,14 @@ mindmaster
 ##### proxefier
 
 网络代理应用，暂时用不到了
+
+##### 印象笔记 
+
+试用作为纯markdown笔记工具 
+
+##### sourcetree
+
+简单纯粹的 git工具
 
 ### 平台 
 
@@ -203,6 +215,8 @@ mindmaster
 #### 采用 
 
 ##### c语言
+
+##### grovvy
 
 #### 试用 
 

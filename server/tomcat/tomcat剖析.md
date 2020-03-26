@@ -319,3 +319,6 @@ Tomcat的主配置文件，包含Service, Connector, Engine, Realm, Valve, Hosts
 ### 技巧
 
 引用环境变量:https://stackoverflow.com/questions/44761831/tomcat-8-context-xml-use-environment-variable-in-datasource
+
+- [ ] 优化指南
+

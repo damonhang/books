@@ -1,0 +1,7 @@
+# SpringSecurity总结
+
+SpringSecurity的Filter也实现了filter接口,可以直接定义在web.xml中，但是通常不这么做
+
+HttpFirewall可以定义
+
+按照<custom-filter/>标签的位置,<http>标签就是一个SecurityFilterChain
