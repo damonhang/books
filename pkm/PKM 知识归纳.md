@@ -60,6 +60,12 @@ Fescar是一种易于使用，高性能，基于Java的开源分布式事务解�
 
 ### 工具 
 
+https://github.com/Awesome-Windows/Awesome/blob/master/README-cn.md
+
+https://github.com/luong-komorebi/Awesome-Linux-Software/blob/master/README_zh-CN.md
+
+ https://github.com/jaywcjlove/awesome-mac/blob/master/README-zh.md 
+
 #### 采用 
 
 ##### githubhunt 
@@ -153,6 +159,21 @@ octotree：github 显示优化
 mac 多视图文件管理器 
 
 https://macflow.net/p/1104.html 
+##### sourcetree
+
+简单纯粹的 git工具
+
+##### wireShark
+
+抓包工具
+
+##### 科莱软件分析系统技术交流版
+
+抓包工具
+
+##### chares
+
+抓包工具
 
 #### 评估 
 
@@ -184,6 +205,10 @@ mindmaster
 
 简单纯粹的 git工具
 
+##### 印象笔记 
+
+试用作为纯markdown笔记工具  使用Typora和git组合代替
+
 ### 平台 
 
 #### 采用 
@@ -204,6 +229,10 @@ mindmaster
 
 #### 试用 
 
+##### processon
+
+基于网络作图
+
 #### 评估 
 
 #### 暂缓 
@@ -223,3 +252,4 @@ mindmaster
 #### 评估 
 
 #### 暂缓 
+
