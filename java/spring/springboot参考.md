@@ -45,6 +45,10 @@ ApplicationRunner` or `CommandLineRunner 可以在Springapplication启动后执�
 
 [主要的配置项](https://docs.spring.io/spring-boot/docs/2.1.14.BUILD-SNAPSHOT/reference/html/common-application-properties.html)
 
+[官方starters](https://github.com/spring-projects/spring-boot/tree/master/spring-boot-project/spring-boot-starters)
+
+[官方starters文档](https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#using-boot-starter)
+
 获取配置的主要三种方式:
 
 - @Value注解

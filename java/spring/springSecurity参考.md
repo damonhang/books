@@ -6,9 +6,9 @@
 
 <img src="../../images/springSecurity参考/image-20200321165554767.png" alt="image-20200321165554767" style="zoom:0%;" />
 
-### 架构
+#### 架构
 
-#### 核心概念
+##### 核心概念
 
 **SecurityContextHolder** 应用的security配置信息存放处
 
@@ -23,8 +23,6 @@
 主要参与认证过程的是`UsernamePasswordAuthenticationToken`、`AuthenticationManager`
 
 ##### web认证
-
-![Abstract Security Interceptor](https://docs.spring.io/spring-security/site/docs/5.1.8.RELEASE/reference/htmlsingle/images/security-interception.png)
 
 `AbstractSecurityInterceptor` 授权服务的主要提供者
 
@@ -53,6 +51,10 @@
 `DaoAuthenticationProvider`AuthenticationProvider的简单实现
 
 `UserDetailsService`和`UserDetails` `PasswordEncoder`
+
+##### PasswordEncoder
+
+自定义方式:
 
 ### WEB
 

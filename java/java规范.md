@@ -47,67 +47,77 @@ if(LOG.isDebugEnabled()){
 [HAL The Hypertext Application Language](http://stateless.co/hal_specification.html) 
 [Developer’s Guide for REST Web Services](https://identify.pitneybowes.com/docs/identify/v1/en/rest/index.html)
 
+## 异常
+
+[异常的反模式](https://www.cnblogs.com/elaron/archive/2012/12/24/2831286.html)
+
 ## 命名规范
 
 ### 对象
 
 ### 业务类
 
-**handler**：一般用于回调处理,当某些情况发生时触发的操作
+**handler**：一般用于回调处理,当某些情况发生时触发的操作,如:异常处理，时间处理
 
 **service** 通用服务类
 
-**processor** 
+**processor**  一般作为流程处理类
 
-**Provider**
+**Provider** 服务提供类 一般提供其他服务
 
 **Converter** 对象转换
 
-**Factory** 
+**Factory** 工厂类
 
 **Container** 容器
 
-**Context** 上下文
+**Context** 上下文,全局信息
 
-**Coordinator** 
+**Coordinator** 协调员
 
-**Writer**
+**Writer** 写入类
 
-**Reader**
+**Reader** 读取类
 
-**Protocol**
+**Protocol** 协议
 
-**editor**
+**editor** 编辑器
 
-**base**
+**base** 抽象类或统一父类
 
-**designer**
+**designer**  设计类
 
 **helper** 辅助类层，一般是一些功能辅助，如SqlHelper封装数据库连接操作提供数据库操作对象，ConfigHelper帮助创建配置信息用于模块初始化构建
 
-**manager**
+**manager** service的上层,或者作为门面模式的入口
 
-**node**
+**node** 责任链或数据接口链表中的节点
 
-**option**
+**option** 可选参数
 
-**element**
+**element** 元素
 
-**info**
+**info** 通用信息
 
-**type**
+**type** 类型
 
-**attribute**
+**attribute** 属性
 
 **utils**层：工具类层，通用的、与业务无关的，可以独立出来，可供其他项目使用；
 
 **tools**层：与某些业务有关，通用性只限于某几个业务类之间
 
-**Delegator**
+**Delegator** 委托模式
 
-**Dispatchor**
+**Dispatchor **分发类,一般根据matcher或其他匹配机制进行任务分发
 
-**Registration**
+**Registration**注册机制
+
+**selecter** 选择器
+
+**able** 接口 表示能力 
+
+**Rule** 作为判断或者匹配规则
 
 #### 数据类
 
@@ -119,7 +129,7 @@ if(LOG.isDebugEnabled()){
 
 **Model** Jpa中的持久化对象
 
-**command**
+**command** 作为 CQRS模式 或表单提交数据
 
 ### 方法
 
@@ -131,3 +141,6 @@ finish方法 完成时触发事件
 
 https://stackoverflow.com/questions/1866794/naming-classes-how-to-avoid-calling-everything-a-whatevermanager
 
+## 通用接口
+
+**Closeable**、**Function**、
