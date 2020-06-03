@@ -21,7 +21,3 @@ el
 spel
 
 ognl
-
-### IDEA工具
-
-sequenceDiagram
