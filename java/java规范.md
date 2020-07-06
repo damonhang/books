@@ -107,6 +107,8 @@ if(LOG.isDebugEnabled()){
 
 **tools**层：与某些业务有关，通用性只限于某几个业务类之间
 
+**pareser** 解析器 一般为数据解析
+
 **Delegator** 委托模式
 
 **Dispatchor **分发类,一般根据matcher或其他匹配机制进行任务分发
