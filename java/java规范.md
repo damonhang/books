@@ -139,6 +139,13 @@ on方法 触发事件
 
 finish方法 完成时触发事件
 
+reserved+类 标识只有基本增删改查 count的类
+
+Efficient 表示相对于节约资源的
+
+普通的servevice承载大部分方法
+验证方法: isXXX 只需要返回boolean  validate  返回验证的结果和信息
+
 ### 参考
 
 https://stackoverflow.com/questions/1866794/naming-classes-how-to-avoid-calling-everything-a-whatevermanager

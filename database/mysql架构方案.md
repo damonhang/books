@@ -199,3 +199,20 @@ Proxy的协程模型使用开源的Libco库。Libco库是微信团队开源的�
 完全兼容MySQL：为了已有的应用程序能够不做任何修改就能迁移到PhxSQL，Proxy需兼容MySQL的所有功能
 
 ### MySQL Fabric
+
+## 中间件
+
+mycat 社区比较活跃
+
+
+
+vitess facebook生产用的
+
+Haproxy 主要用于负载均衡
+
+mysql proxy 官方的中间件
+
+[分布式中间件比较](https://blog.csdn.net/w892824196/article/details/82660415)
+
+[分布式数据库中间件对比](https://blog.csdn.net/weixin_34034261/article/details/92772322)
+
