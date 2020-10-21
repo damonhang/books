@@ -17,3 +17,5 @@ Jigsaw
 oSGI
 
 java mission control
+
+JNI
